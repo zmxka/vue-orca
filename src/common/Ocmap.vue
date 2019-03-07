@@ -63,7 +63,21 @@
   export default {
 
     data() {
-
+      return {
+        markers: [],//路径点maeker实例集合
+        markersShip: [ ],//船标点实例
+        markersWater: [],//水质点maeker实例集合
+        markersArae: [],//区域点maeker实例集合
+        markersAraeline: [],//未闭合区域点maeker实例集合
+        markersClean: [],//清洁路线实例
+        areaSign: 0,//区域是否闭合 0未闭合 1 闭合
+        //isdel: 1,//是否允许删除 0 禁止 1 允许
+        //pointType: ,//marker点的类型 0路径 1水质 2区域
+        //shipChooseId: -1,//-1表示未选择，0表示选择0号船依此类推
+        icon:null,
+        activeTaskList: [],
+        tem : 0,
+      }
     },
     beforeCreate() {
       getBoundaryAndObstacles({shipId: 5}).then(res => {
