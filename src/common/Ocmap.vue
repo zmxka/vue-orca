@@ -164,7 +164,6 @@
           zoom: 18, // 级别
         });
         map.on('click', this.addMarker);
-        //map.on('mouseover', this.openMapClick);
       },
       //获取船坐标
       getShipLngLat(){
